@@ -3,7 +3,7 @@
 ################################################################################
 #                                                                              #
 # AUTHOR: Kevin Southwick                                                      #
-# VERSION: 20200925                                                            #
+# VERSION: 20201013                                                            #
 # DESCRIPTION: Small, dirty script which makes printing information provided   #
 #              by jq easier. Meant to be used as a function in .bashrc         #
 # SCRIPT FLOW:                                                                 #
@@ -45,7 +45,7 @@ main () {
         raw_log_first_char=${raw_log:0:1}
 
         #sanitization check
-        if [[ $raw_log_first_char != "{" ]] || [[ $raw_log_first_char != "[" ]]; then
+        if [[ $raw_log_first_char != "{" ]] && [[ $raw_log_first_char != "[" ]]; then
             echo "Please make sure you have a log in your clipboard."
             echo
             echo "Exit Code 2"
