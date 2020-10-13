@@ -7,6 +7,7 @@ Collection of quick and dirty scripts that make running around console logs a bi
     - Takes what's in your clipboard and runs it through jq.
 
 ### Dependencies Needed
+  - AUTO-JQ
 ```sh
 $ sudo apt update
 $ sudo apt install xsel jq
