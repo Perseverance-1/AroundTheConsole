@@ -45,7 +45,7 @@ main () {
         raw_log_first_char=${raw_log:0:1}
 
         #sanitization check
-        if [[ $raw_log_first_char != "{" ]]; then
+        if [[ $raw_log_first_char != "{" ]] || [[ $raw_log_first_char != "[" ]]; then
             echo "Please make sure you have a log in your clipboard."
             echo
             echo "Exit Code 2"
